@@ -30,7 +30,7 @@ def style_background_dashboard():
         <style>
                
                 .stApp{
-                      background: #E0E3FF !important;
+                      background: #9b9fb8 !important;
                 }
         </style>
     
@@ -45,6 +45,8 @@ def style_base_layout():
          /* Hide Top Bar of streamlit*/
 
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        /* Hide Top Bar of streamlit*/
              
             #MainMenu, footer, header {
                   visibility:hidden;
@@ -68,12 +70,13 @@ def style_base_layout():
                 font-size:2rem !important;
                 line-height:0.9 !important;
                 margin-bottom:0rem !important;
-                color: black !important;
+                  color: black !important;
             }
 
             h3, h4, p{
 
                   font-family: 'Outfit', sans-serif;
+                #    color:black !important;
             }
 
 
