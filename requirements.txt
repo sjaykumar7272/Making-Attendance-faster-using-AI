@@ -1,0 +1,26 @@
+# Utilities
+numpy
+pandas
+
+#FACE RECOGINATION
+scikit-learn
+
+# dlib is use for face reconination make abox on face
+dlib-bin
+
+
+# this is use for face embedding all point on face 
+git+https://github.com/ageitgey/face_recognition_models
+
+# setuptools is used for non python libraies to convert into python like git face regonition
+setuptools
+
+#database 
+supabase   
+bcrypt
+
+segno # convert links into QR code
+pillow # it is help in image preprocessing 
+
+streamlit # it is a frontend libraries
+
