@@ -9,7 +9,7 @@ from src.database.db import get_all_students
 
 @st.cache_resource
 def load_dlib_models():
-    detector = dlib.get_frontal_face_dector()
+    detector = dlib.get_frontal_face_detector()
 
     sp = dlib.shape_predictor(
         face_recognition_models.pose_predictor_model_location()
@@ -60,7 +60,7 @@ def get_trained_model():
     except ValueError:
         pass
 
-    return {'clf': clf, 'X':x, 'y':y}
+    return {'clf': clf, 'X':X, 'y':y}
 
 
 def train_classifier():
@@ -68,7 +68,7 @@ def train_classifier():
     model_data = get_trained_model()
     return bool(model_data)
 
-def predict_attence(class_image_np):
+def predict_attendance(class_image_np):
     encodings = get_face_embedding(class_image_np)
 
     detected_student = {}
@@ -99,4 +99,4 @@ def predict_attence(class_image_np):
 
         if best_match_score  <= resemblance_threshold:
             detected_student[predicted_id] = True
-    return detected_student, all_students, len(encoding)
+    return detected_student, all_students, len(encodings)
