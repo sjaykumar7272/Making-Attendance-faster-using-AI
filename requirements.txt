@@ -24,3 +24,5 @@ pillow # it is help in image preprocessing
 
 streamlit # it is a frontend libraries
 
+librosa #audio file  cut and modify
+resemblyzer # for audio to embeding

@@ -2,12 +2,11 @@
 import streamlit as st
 
 from src.ui.base_layout import style_background_dashboard,style_base_layout
-
 from src.components.footer import footer_dashboard
-
 from src.components.header import header_dashboard
-
 from src.database.db import check_teacher_exists, create_teacher,teacher_login
+
+
 
 def teacher_screen():
 
@@ -21,10 +20,14 @@ def teacher_screen():
     elif st.session_state.teacher_login_type == "register":
         teacher_screen_register()
 
+
+
 def teacher_dashboard():
     teacher_data = st.session_state.teacher_data
 
     st.header(f"""Welcome, {teacher_data['name']}""")
+
+
 
 def login_teacher(username, password):
     if not username or not password:
@@ -36,6 +39,8 @@ def login_teacher(username, password):
         st.session_state.is_logged_in = True
         return True
     return False
+
+
 
 def teacher_screen_login():
 
@@ -81,6 +86,9 @@ def teacher_screen_login():
     footer_dashboard()
 
 
+
+
+
 def register_teacher(teacher_username, teacher_name, teacher_pass, teacher_pass_confirm):
     if not teacher_username or not teacher_name or not teacher_pass:
         return False, "All Fields are required!"
@@ -93,6 +101,9 @@ def register_teacher(teacher_username, teacher_name, teacher_pass, teacher_pass_
         return True, "Sucessfully Created! Login Now"
     except Exception as e:
         return False, "Unexpected Error!"
+
+
+
 
 
 def teacher_screen_register():
