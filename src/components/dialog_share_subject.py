@@ -6,7 +6,7 @@ import io
 
 @st.dialog("Share Class Link")
 def share_subject_dialog(subject_name, subject_code):
-    app_domain = "https://snapclass-main.streamlit.app"
+    app_domain = "http://localhost:8501"
     join_url = f"{app_domain}/?join-code={subject_code}"
 
     st.header("Scan to Join")
@@ -28,3 +28,5 @@ def share_subject_dialog(subject_name, subject_code):
     with col2:
         st.markdown('### Scan to Join')
         st.image(out.getvalue(), caption='QRCODE for class joining')
+
+        

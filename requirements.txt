@@ -1,3 +1,5 @@
+streamlit # it is a frontend libraries
+
 # Utilities
 numpy
 pandas
@@ -22,7 +24,8 @@ bcrypt
 segno # convert links into QR code
 pillow # it is help in image preprocessing 
 
-streamlit # it is a frontend libraries
+
 
 librosa #audio file  cut and modify
 resemblyzer # for audio to embeding
+

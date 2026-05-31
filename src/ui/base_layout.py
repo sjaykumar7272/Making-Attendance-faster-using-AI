@@ -30,7 +30,7 @@ def style_background_dashboard():
         <style>
                
                 .stApp{
-                      background: #8eeaca !important;
+                      background:#e8c99d !important;
                 }
         </style>
     
