@@ -15,7 +15,7 @@ dlib-bin
 git+https://github.com/ageitgey/face_recognition_models
 
 # setuptools is used for non python libraies to convert into python like git face regonition
-setuptools
+setuptools==80.9.0
 
 #database 
 supabase   
